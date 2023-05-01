@@ -39,4 +39,19 @@
                 display: block
             }
         </style>
-        <iframe src=https://loose.sellpass.io/products/key></iframe>
+        <script>
+            // Get the iframe element by name
+            var iframe = document.querySelector('iframe[name="shop"]');
+
+            // Get the document object of the iframe
+            var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+            // Get all elements with the class 'Header_header__Z8PUO'
+            var headerElements = iframeDoc.querySelectorAll('.Header_header__Z8PUO');
+
+            // Remove each header element from the iframe document
+            headerElements.forEach(function(header) {
+                header.remove();
+            });
+        </script>
+        <iframe id="shop" src=https://loose.sellpass.io/products/key></iframe>
